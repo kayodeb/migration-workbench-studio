@@ -14,7 +14,7 @@ function Person({ text }: { text: string }) {
   return (
     <>
       {prefix}
-      <Link to="/intervenants" hash={speakerId(sp)} className="font-medium text-foreground underline decoration-primary underline-offset-4 hover:text-primary">
+      <Link to="/intervenants" search={{ q: "" }} hash={speakerId(sp)} className="font-medium text-foreground underline decoration-primary underline-offset-4 hover:text-primary">
         {name}&nbsp;↗
       </Link>
       {rest}
