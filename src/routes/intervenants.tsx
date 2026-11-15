@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { Search } from "lucide-react";
 import { speakers } from "@/data/speakers";
 
 export const Route = createFileRoute("/intervenants")({
@@ -16,14 +17,16 @@ export const Route = createFileRoute("/intervenants")({
   component: Intervenants,
 });
 
+const norm = (t: string) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
+
 function Intervenants() {
   const [q, setQ] = useState("");
-  const list = speakers.filter((s) => `${s.first} ${s.last} ${s.role} ${s.org ?? ""}`.toLowerCase().includes(q.toLowerCase()));
+  const list = speakers.filter((s) => `${s.first} ${s.last} ${s.role} ${s.org ?? ""}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").includes(norm(q)));
   return (
     <main className="mx-auto max-w-6xl px-5 py-14">
       <p className="text-sm uppercase tracking-widest text-primary">Personnalités</p>
       <h1 className="mt-2 text-4xl font-bold md:text-5xl">Intervenants du Forum</h1>
-      <input id="recherche" autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="Rechercher un nom, une organisation…" className="mt-8 w-full max-w-md rounded-md border border-input bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring" />
+      <div className="relative mt-8 max-w-md"><Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" /><input id="recherche" autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="Rechercher un nom, une organisation…" className="w-full rounded-md border border-input bg-card py-3 pl-10 pr-4 text-sm outline-none focus:ring-2 focus:ring-ring" /></div>
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((s) => (
           <article key={s.first + s.last} className="overflow-hidden rounded-lg border border-border bg-card">

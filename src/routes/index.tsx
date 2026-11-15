@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Search } from "lucide-react";
 import { formats } from "@/data/programme";
 import { speakers } from "@/data/speakers";
 
@@ -30,7 +31,7 @@ function Index() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/programme" className="rounded-md bg-brand px-5 py-3 font-medium text-accent-foreground">Voir le programme</Link>
             <Link to="/intervenants" className="rounded-md border border-border px-5 py-3 font-medium hover:bg-secondary">{speakers.length} intervenants</Link>
-            <Link to="/intervenants" hash="recherche" className="rounded-md border border-primary px-5 py-3 font-medium text-primary hover:bg-secondary">🔍 Rechercher un intervenant</Link>
+            <Link to="/intervenants" hash="recherche" className="inline-flex items-center gap-2 rounded-md border border-primary px-5 py-3 font-medium text-primary hover:bg-secondary"><Search className="h-4 w-4" /> Rechercher un intervenant</Link>
           </div>
           <div className="mt-12 flex -space-x-3">
             {faces.map((s) => (
