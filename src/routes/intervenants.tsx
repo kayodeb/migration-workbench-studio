@@ -23,7 +23,7 @@ function Intervenants() {
     <main className="mx-auto max-w-6xl px-5 py-14">
       <p className="text-sm uppercase tracking-widest text-primary">Personnalités</p>
       <h1 className="mt-2 text-4xl font-bold md:text-5xl">Intervenants du Forum</h1>
-      <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Rechercher un nom, une organisation…" className="mt-8 w-full max-w-md rounded-md border border-input bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring" />
+      <input id="recherche" autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="Rechercher un nom, une organisation…" className="mt-8 w-full max-w-md rounded-md border border-input bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring" />
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((s) => (
           <article key={s.first + s.last} className="overflow-hidden rounded-lg border border-border bg-card">
