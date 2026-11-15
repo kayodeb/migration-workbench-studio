@@ -1,6 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { days } from "@/data/programme";
+import { Link } from "@tanstack/react-router";
+import { findSpeaker, speakerId } from "@/data/speakers";
+
+function Person({ text }: { text: string }) {
+  const m = text.match(/^(Modération\s*:\s*)?([^,]+)(,.*)?$/);
+  const prefix = m?.[1] ?? "";
+  const name = m?.[2] ?? text;
+  const rest = m?.[3] ?? "";
+  const sp = findSpeaker(name);
+  if (!sp) return <>{text}</>;
+  return (
+    <>
+      {prefix}
+      <Link to="/intervenants" hash={speakerId(sp)} className="font-medium text-foreground underline decoration-primary underline-offset-4 hover:text-primary">
+        {name}&nbsp;↗
+      </Link>
+      {rest}
+    </>
+  );
+}
 
 export const Route = createFileRoute("/programme")({
   head: () => ({
@@ -44,7 +64,7 @@ function Programme() {
               {s.theme && <p className="mt-2 text-sm italic text-foreground/85">{s.theme}</p>}
               {s.people && (
                 <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
-                  {s.people.map((p) => <li key={p}>— {p}</li>)}
+                  {s.people.map((p) => <li key={p}>— <Person text={p} /></li>)}
                 </ul>
               )}
             </div>

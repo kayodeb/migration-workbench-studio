@@ -1,7 +1,7 @@
 export type Speaker = { first: string; last: string; role: string; org?: string | undefined; photo?: string | undefined };
 
 // Source : https://www.cyberafricaforum.com/speakers
-export const speakers: Speaker[] = [
+const list: Speaker[] = [
  {
   "first": "Yvon",
   "last": "DETCHENOU",
@@ -426,3 +426,18 @@ export const speakers: Speaker[] = [
   "photo": "/__l5e/assets-v1/e83900f4-1f6f-40a5-8614-937a1d3e4c2b/speaker-39.jpg"
  }
 ];
+
+export const norm = (t: string) =>
+  t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+export const speakerId = (sp: Speaker) => norm(`${sp.first} ${sp.last}`).replace(/ /g, "-");
+
+export const speakers = list;
+
+const firstTokens = (sp: Speaker) => norm(sp.first).split(" ").filter((t) => t !== "dr" && t !== "prof");
+
+/** Finds the speaker named in a programme line like "Prénom NOM, rôle". */
+export function findSpeaker(name: string): Speaker | undefined {
+  const n = ` ${norm(name)} `;
+  return list.find((sp) => n.includes(` ${norm(sp.last)} `) && firstTokens(sp).some((t) => n.includes(` ${t} `)));
+}
