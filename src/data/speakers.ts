@@ -283,11 +283,5 @@ export const speakers: Speaker[] = [
   "last": "Doffou",
   "role": "Senior Manager – Cybersécurité offensive",
   "photo": "https://web.cyberafricaforum.com/storage/uploads/speakers/thumbnails/1794147948.png"
- },
- {
-  "first": "Abonnez-vous à notre",
-  "last": "newsletter",
-  "role": "Recevez directement les actualités du Cyber Africa Forum, les temps forts de l’événement et nos contenus exclusifs.",
-  "photo": "https://www.cyberafricaforum.com/image/A58I3354.jpg"
  }
 ];
