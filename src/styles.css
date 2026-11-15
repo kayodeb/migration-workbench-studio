@@ -162,3 +162,9 @@
 @utility bg-brand { background-image: var(--gradient-brand); }
 @utility bg-hero { background-image: var(--gradient-hero); }
 @utility text-brand { background-image: var(--gradient-brand); background-clip: text; color: transparent; }
+
+@keyframes speaker-pulse {
+  0%, 100% { box-shadow: 0 0 0 2px var(--primary), 0 0 0 0 color-mix(in oklab, var(--accent) 60%, transparent); }
+  50% { box-shadow: 0 0 0 2px var(--primary), 0 0 0 14px color-mix(in oklab, var(--accent) 0%, transparent); }
+}
+.speaker-selected { animation: speaker-pulse 1.4s ease-out 3; box-shadow: 0 0 0 2px var(--primary); transform: translateY(-4px); }
