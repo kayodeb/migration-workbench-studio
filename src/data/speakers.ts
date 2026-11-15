@@ -283,5 +283,146 @@ export const speakers: Speaker[] = [
   "last": "DOFFOU",
   "role": "Senior Manager – Cybersécurité offensive",
   "photo": "https://web.cyberafricaforum.com/storage/uploads/speakers/thumbnails/1794147948.png"
+ },
+ {
+  "first": "Franck",
+  "last": "KIÉ",
+  "role": "Commissaire Général du Cyber Africa Forum",
+  "photo": "/__l5e/assets-v1/21103d64-ea53-4d79-bf9d-0afa60bf06e5/speaker-01.jpg"
+ },
+ {
+  "first": "Didier",
+  "last": "KLA",
+  "role": "Directeur Technologique, Groupe KAYDAN et Président, Comité d'Organisation CAF",
+  "photo": "/__l5e/assets-v1/88a0b50b-51cf-43c0-9cc8-0bae87232c8e/speaker-02.jpg"
+ },
+ {
+  "first": "Mohamed",
+  "last": "DEMBELE",
+  "role": "Managing Partner, Cybersecurity Business Unit",
+  "org": "Cybastion",
+  "photo": "/__l5e/assets-v1/7892907b-a88a-45e4-a709-a76a77b7bd01/speaker-07.jpg"
+ },
+ {
+  "first": "Tamim",
+  "last": "KHODER",
+  "role": "Directeur Cybersécurité",
+  "org": "Deloitte France",
+  "photo": "/__l5e/assets-v1/9c75f8e8-2916-4f49-b8f4-c3e51b793a14/speaker-09.jpg"
+ },
+ {
+  "first": "Hermann",
+  "last": "KOUDAFOKE",
+  "role": "Vice-Président",
+  "photo": "/__l5e/assets-v1/e8c2acf3-9db8-4419-b42a-877db0f4cf3e/speaker-12.jpg"
+ },
+ {
+  "first": "Gildas",
+  "last": "GNIDEHOU",
+  "role": "Founder",
+  "org": "AFRICA VALLEY SARL",
+  "photo": "/__l5e/assets-v1/89d083a4-5810-4b5c-9fb8-cbcfb27b1e9c/speaker-13.jpg"
+ },
+ {
+  "first": "Biblis",
+  "last": "ABATTI",
+  "role": "Spécialiste GRC"
+ },
+ {
+  "first": "Aristide",
+  "last": "ADJINACOU",
+  "role": "Directeur Général de l'ASIN",
+  "org": "République du Bénin",
+  "photo": "/__l5e/assets-v1/b7e49dfe-001f-4a0a-95c7-dd47661104f8/speaker-17.jpg"
+ },
+ {
+  "first": "Thelma Efua",
+  "last": "QUAYE",
+  "role": "Chief Digital Infrastructure, Skills and Empowerment Officer",
+  "org": "Smart Africa",
+  "photo": "/__l5e/assets-v1/5ff2eca0-f6f0-4635-884c-0457b9b0efc2/speaker-18.jpg"
+ },
+ {
+  "first": "Nérys",
+  "last": "TCHIBOZO",
+  "role": "Modération du side event",
+  "org": "CNIN",
+  "photo": "/__l5e/assets-v1/7a4cd36c-2712-4dbc-ba55-b8497a819caf/speaker-19.jpg"
+ },
+ {
+  "first": "Huguette",
+  "last": "BOKPE GNACADJA",
+  "role": "Présidente",
+  "org": "INF",
+  "photo": "/__l5e/assets-v1/0900c2a4-9d17-48b6-873f-b214fc89274b/speaker-20.jpg"
+ },
+ {
+  "first": "Elon'm Mario",
+  "last": "METONOU",
+  "role": "Procureur Spécial",
+  "org": "CRIET",
+  "photo": "/__l5e/assets-v1/ac064af6-260c-40ed-9dd8-43db13d90ed0/speaker-21.jpg"
+ },
+ {
+  "first": "Diane",
+  "last": "ASSIKIDANA",
+  "role": "Responsable Service Statistiques, Études et Formation",
+  "org": "CNIN",
+  "photo": "/__l5e/assets-v1/6d3ce37f-8234-4488-995e-50a3f83ec39e/speaker-22.jpg"
+ },
+ {
+  "first": "Marilyse",
+  "last": "AHOUANGONOU",
+  "role": "Direction des Collectes et des Analyses",
+  "org": "CNIN",
+  "photo": "/__l5e/assets-v1/ecda7085-1abb-40b8-88f9-7167db465586/speaker-23.jpg"
+ },
+ {
+  "first": "Ilham",
+  "last": "ADIOS",
+  "role": "Direction des Collectes et des Analyses",
+  "org": "CNIN"
+ },
+ {
+  "first": "Ismahill",
+  "last": "DIABY",
+  "role": "Vice-Président, Directeur Général Afrique de l'Ouest & Centrale Francophone et Lusophone",
+  "org": "Visa",
+  "photo": "/__l5e/assets-v1/30959b2e-4af4-45aa-b73d-48800b473b7f/speaker-27.jpg"
+ },
+ {
+  "first": "Jonathan",
+  "last": "BOURGUIGNON",
+  "role": "Crime Prevention and Criminal Justice Officer (Anti-corruption)",
+  "org": "United Nations Office on Drugs and Crime (UNODC)",
+  "photo": "/__l5e/assets-v1/ade5f56f-d449-46fe-ae1b-a19617b8cf42/speaker-29.jpg"
+ },
+ {
+  "first": "Dr Richmond",
+  "last": "TIEMOKO",
+  "role": "Représentant résident au Bénin",
+  "org": "Fonds des Nations Unies pour la population (UNFPA)",
+  "photo": "/__l5e/assets-v1/e48647c9-985c-4122-8941-33dff14cedf6/speaker-30.jpg"
+ },
+ {
+  "first": "Isabelle",
+  "last": "DJENI",
+  "role": "Directrice Générale Adjointe",
+  "org": "Genesis Holding Company",
+  "photo": "/__l5e/assets-v1/5f3a516f-566a-4434-8015-fa44d55c5fb9/speaker-33.jpg"
+ },
+ {
+  "first": "Anne Emmanuelle",
+  "last": "KOUADIO-N'GORAN",
+  "role": "Fondatrice",
+  "org": "Studio Tequoia, cabinet de conseil et de technologie",
+  "photo": "/__l5e/assets-v1/3661b5ec-9d78-4041-8bbd-5f305e80ece4/speaker-38.jpg"
+ },
+ {
+  "first": "Melinda",
+  "last": "PRUDENCIO",
+  "role": "Deputy Country Manager & Sales Manager",
+  "org": "Gozem Bénin",
+  "photo": "/__l5e/assets-v1/e83900f4-1f6f-40a5-8614-937a1d3e4c2b/speaker-39.jpg"
  }
 ];
