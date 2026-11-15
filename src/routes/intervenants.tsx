@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
-import { speakers, speakerId, type Speaker } from "@/data/speakers";
+import { speakers, speakerId, speakerInitials, type Speaker } from "@/data/speakers";
 
 export const Route = createFileRoute("/intervenants")({
   validateSearch: (s: Record<string, unknown>) => ({ q: typeof s["q"] === "string" ? (s["q"] as string) : "" }),
@@ -25,7 +25,7 @@ function SpeakerPhoto({ s }: { s: Speaker }) {
   }
   return (
     <div className="flex aspect-[1.1] w-full flex-col items-center justify-center bg-secondary">
-      <span className="font-display text-5xl font-bold text-muted-foreground">{s.first[0]}{s.last[0]}</span>
+      <span className="font-display text-5xl font-bold text-muted-foreground">{speakerInitials(s)}</span>
       <span className="mt-2 text-xs text-muted-foreground">Photo à venir</span>
     </div>
   );

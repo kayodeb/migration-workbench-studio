@@ -424,7 +424,58 @@ const list: Speaker[] = [
   "role": "Deputy Country Manager & Sales Manager",
   "org": "Gozem Bénin",
   "photo": "/speakers/speaker-39.jpg"
- }
+ },
+ // Jour 2 — source : CAF26-Agenda-New-Format JOUR 2 - V1.pdf (photos à venir)
+ { "first": "Rodolphe Sevi", "last": "ADJAIGBE", "role": "Chef des Affaires Juridiques, des Partenariats et de la Cyberdiplomatie", "org": "CNIN, République du Bénin" },
+ { "first": "Hubert", "last": "NZAKIMUENA", "role": "Chef de Mission", "org": "CICR Bénin" },
+ { "first": "Karel", "last": "DOGUE", "role": "Directeur Général", "org": "ERSUMA-OHADA" },
+ { "first": "Mohamed", "last": "SOUNKERE", "role": "Fondateur et Président", "org": "VEONE" },
+ { "first": "Pierre", "last": "CHAMPSAVOIR", "role": "Expert Green IT et Écoconception des Services Numériques", "org": "Programme BeDigital-LuxDev" },
+ { "first": "Gilles", "last": "KOUNOU", "role": "Chief Executive Officer", "org": "OPEN SI-KKIAPAY" },
+ { "first": "Jeannot", "last": "MUFUNGIZI", "role": "Senior Director | Head of Risk, West & Central Africa", "org": "Visa" },
+ { "first": "Bertrand", "last": "NGONO ONGOLO", "role": "Senior Manager, Enterprise Information Security, Network Technologies", "org": "MTN" },
+ { "first": "Ornella", "last": "TCHUENTE", "role": "Founder, Executive Personal Branding & Reputation Strategist · Créatrice de l'Indice d'Influence Africaine", "org": "Goddess Agency" },
+ { "first": "Yassine", "last": "LATOUNDJI", "role": "Ministre de la Culture, des Arts et du Patrimoine", "org": "République du Bénin" },
+ { "first": "Claude", "last": "BORNA", "role": "Managing Director and Chief Innovation Officer", "org": "Sèmè City Development Agency - Presidency" },
+ { "first": "Victorien", "last": "DOUGNON", "role": "Professeur & Directeur Général", "org": "Agence Béninoise de Télé-enseignement" },
+ { "first": "Paul-Alexandre", "last": "DAGRY", "role": "Associé, Stratégie & Performance", "org": "Adenka" },
+ { "first": "Dr Abdoul Karim", "last": "GANAME", "role": "Fondateur et Chef de la cybersécurité · Enseignant à l'École Polytechnique de Montréal", "org": "StreamScan" },
+ { "first": "Corentin", "last": "ADJOVI", "role": "Directeur Général", "org": "Comtel Technologies" },
+ { "first": "Gildas", "last": "HOUESSINSONON", "role": "Fondateur et Dirigeant", "org": "Digisec" },
+ { "first": "Inza", "last": "CISSÉ", "role": "Directeur Général Adjoint", "org": "GUCE-CI" },
+ { "first": "Papa Dame", "last": "SAMBA", "role": "CEO - Founder", "org": "TALIXMAN GROUP" },
+ { "first": "Alioune", "last": "SOW", "role": "Director of Sales & Business Development", "org": "StreamScan" },
+ { "first": "Genevoix", "last": "BOKA", "role": "Manager Senior Cybersécurité", "org": "Kaydan Technology" },
+ { "first": "Joël-Hervé", "last": "MAFORIKAN", "role": "Directeur Général", "org": "Quality Corporate" },
+ { "first": "Cyrille", "last": "ZOUHON", "role": "Directeur de la Transformation Digitale et de l'Innovation", "org": "Ministère de la Justice et de la Législation" },
+ { "first": "Nériah", "last": "SOSSOU", "role": "Directeur des Services Numériques", "org": "Kaydan Technology" },
+ { "first": "Chary", "last": "DOUMBIA", "role": "General Manager Enterprise Business Unit", "org": "MTN" },
+ { "first": "Apastes Semevo", "last": "AICHEOU", "role": "Founder & General Manager", "org": "Selys Africa" },
+ { "first": "Rolande", "last": "FALLET", "role": "Product Lead", "org": "EQUANS" },
+ { "first": "Awa", "last": "CISSE", "role": "Directrice", "org": "Sharp Vision Afrique de l'Ouest" },
+ { "first": "Dr Athanase M.", "last": "ATCHOME", "role": "Président", "org": "Club RSSI Bénin" },
+ { "first": "Marius", "last": "OUPOH", "role": "Président", "org": "APSI-CI" },
+ { "first": "Roméo Stévens", "last": "AZANDEGBE", "role": "Vice-Président", "org": "APSI-BJ" },
+ { "first": "Tafamba", "last": "KPANDJA", "role": "APSI-TG" },
+ { "first": "Alexandre", "last": "GNACADJA", "role": "CJ", "org": "APSI-BJ" },
+ { "first": "Alain", "last": "DOSSOUHOUAN", "role": "APSI-BJ" },
+ { "first": "Marlyse", "last": "KIKISSAGBE", "role": "bjWhiteHats" },
+ { "first": "Henri", "last": "DA SYLVA", "role": "Club RSSI Bénin" },
+ { "first": "Christelle", "last": "FAIHUN AGO", "role": "TG", "org": "APSI-BJ" },
+ { "first": "Nick-Aurel", "last": "HOUESSOU", "role": "SG", "org": "APSI-BJ" },
+ { "first": "Adeshina", "last": "YESSOUFOU", "role": "OG", "org": "APSI-BJ" },
+ { "first": "Harold", "last": "ADJAHO", "role": "Coordinateur", "org": "Bénin DNS Forum" },
+ { "first": "Hermine", "last": "GOUKODADJA", "role": "ISOC Bénin" },
+ { "first": "Marius", "last": "GNANCADJA", "role": "CC", "org": "APSI-BJ" },
+ { "first": "Gérard", "last": "ADETOLA", "role": "Club RSSI Bénin" },
+ { "first": "Jean Claude", "last": "SIGUI", "role": "Président", "org": "Club des DSI Côte d'Ivoire" },
+ { "first": "Bernadin", "last": "TONOUDJI", "role": "Manager du bjCSIRT", "org": "ASIN" },
+ { "first": "Grégoire", "last": "GOUCLOUNON", "role": "RSSI" },
+ { "first": "Kevin", "last": "DEGILA", "role": "Directeur de la Valorisation des Innovations, des Technologies et de l'Expérimentation", "org": "Ministère de la Transformation Digitale et de l'Innovation, Bénin" },
+ { "first": "Serge-Éric", "last": "GNAMKEY", "role": "Country Manager, Côte d'Ivoire et Sénégal", "org": "Yango Food" },
+ { "first": "Dr Moussa", "last": "TRAORÉ", "role": "Directeur Général, SaH Analytics France et Directeur Général Adjoint chargé de l'Innovation et de la Recherche & Développement", "org": "SaH Analytics International" },
+ { "first": "Kévin", "last": "AGOLI-AGBO", "role": "Directeur des Opérations et de la Relation Client", "org": "Quality Corporate" },
+ { "first": "Armandine", "last": "ANAGO", "role": "Cheffe du département Confiance Numérique et Développement", "org": "Quality Corporate" }
 ];
 
 export const norm = (t: string) =>
@@ -435,6 +486,16 @@ export const speakerId = (sp: Speaker) => norm(`${sp.first} ${sp.last}`).replace
 export const speakers = list;
 
 const firstTokens = (sp: Speaker) => norm(sp.first).split(" ").filter((t) => t !== "dr" && t !== "prof");
+
+/** Initiales du prénom et du nom, sans les titres (Dr, SEM., Prof.). */
+export function initials(name: string) {
+  const words = name.split(/\s+/).filter((w) => w && !/^(dr|sem|prof)\.?$/i.test(w));
+  return `${words[0]?.[0] ?? ""}${words.length > 1 ? (words.at(-1)?.[0] ?? "") : ""}`.toUpperCase();
+}
+
+/** Initiales d'un intervenant connu : premier prénom (hors titre) + nom. */
+export const speakerInitials = (sp: Speaker) =>
+  `${sp.first.split(/\s+/).find((w) => !/^(dr|sem|prof)\.?$/i.test(w))?.[0] ?? ""}${sp.last[0] ?? ""}`.toUpperCase();
 
 /** Découpe une ligne du programme du type "Modération : Prénom NOM, rôle". */
 export function parsePerson(text: string) {

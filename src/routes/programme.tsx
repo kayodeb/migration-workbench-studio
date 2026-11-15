@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { days, roomOf, roomSlug } from "@/data/programme";
+import { days, roomOf, roomSlug, roomsOf } from "@/data/programme";
+
+// Le Forum commence au premier jour qui a des salles (Jour 1).
+const firstForumDay = Math.max(0, days.findIndex((d) => roomsOf(d).length > 0));
 import { Person } from "@/components/Person";
 
 export const Route = createFileRoute("/programme")({
@@ -9,7 +12,7 @@ export const Route = createFileRoute("/programme")({
       { title: "Programme — Cyber Africa Forum 2026" },
       { name: "description", content: "Programme prévisionnel du Cyber Africa Forum 2026 : panels, Net Discover, side events et networking." },
       { property: "og:title", content: "Programme — Cyber Africa Forum 2026" },
-      { property: "og:description", content: "Toutes les sessions du 14 au 16 novembre 2026 à Cotonou." },
+      { property: "og:description", content: "Toutes les sessions du 14 au 17 novembre 2026 à Cotonou." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -20,7 +23,7 @@ export const Route = createFileRoute("/programme")({
 const kindStyle = { plenary: "border-l-accent", side: "border-l-primary", break: "border-l-muted-foreground" } as const;
 
 function Programme() {
-  const [active, setActive] = useState(days.length - 1);
+  const [active, setActive] = useState(firstForumDay);
   const day = days[active]!;
   return (
     <main className="mx-auto max-w-5xl px-5 py-14">
