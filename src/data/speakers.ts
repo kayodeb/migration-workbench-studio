@@ -436,6 +436,13 @@ export const speakers = list;
 
 const firstTokens = (sp: Speaker) => norm(sp.first).split(" ").filter((t) => t !== "dr" && t !== "prof");
 
+/** Découpe une ligne du programme du type "Modération : Prénom NOM, rôle". */
+export function parsePerson(text: string) {
+  const m = text.match(/^(Modération\s*:\s*)?([^,]+)(,.*)?$/);
+  const name = (m?.[2] ?? text).trim();
+  return { moderator: !!m?.[1], prefix: m?.[1] ?? "", name, rest: m?.[3] ?? "", speaker: findSpeaker(name) };
+}
+
 /** Finds the speaker named in a programme line like "Prénom NOM, rôle". */
 export function findSpeaker(name: string): Speaker | undefined {
   const n = ` ${norm(name)} `;

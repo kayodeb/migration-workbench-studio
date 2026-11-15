@@ -8,6 +8,18 @@ export type Session = {
 };
 export type Day = { label: string; date: string; venue?: string; sessions: Session[] };
 
+// "Plénière" et "Plénière Dôme" désignent la même salle dans le programme source.
+const roomAliases: Record<string, string> = { "Plénière": "Plénière Dôme" };
+
+/** Nom de salle normalisé d'une session (undefined si aucune salle n'est attribuée). */
+export const roomOf = (s: Session) => (s.room ? (roomAliases[s.room] ?? s.room) : undefined);
+
+export const roomSlug = (room: string) =>
+  room.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/** Salles d'un jour, dans l'ordre où elles apparaissent au programme. */
+export const roomsOf = (day: Day) => [...new Set(day.sessions.map(roomOf).filter((r): r is string => !!r))];
+
 export const formats = [
   { name: "Agora de la Tech", sub: "Stands", text: "Espace dédié à l'innovation concrète et à l'entrepreneuriat numérique africain. Startups, projets innovants, technologies adaptées aux réalités locales : on y vient pour voir, tester, découvrir et investir." },
   { name: "Innovation Talk", sub: "Keynotes & Net Discover", text: "La scène des prises de parole qui marquent. Formats inattendus, personnalités qui ont quelque chose à présenter : l'espace qui ouvre les esprits et pose les bases des grandes conversations du Forum." },

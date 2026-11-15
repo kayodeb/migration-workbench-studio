@@ -1,26 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { days } from "@/data/programme";
-import { Link } from "@tanstack/react-router";
-import { findSpeaker, speakerId } from "@/data/speakers";
-
-function Person({ text }: { text: string }) {
-  const m = text.match(/^(Modération\s*:\s*)?([^,]+)(,.*)?$/);
-  const prefix = m?.[1] ?? "";
-  const name = m?.[2] ?? text;
-  const rest = m?.[3] ?? "";
-  const sp = findSpeaker(name);
-  if (!sp) return <>{text}</>;
-  return (
-    <>
-      {prefix}
-      <Link to="/intervenants" search={{ q: "" }} hash={speakerId(sp)} className="font-medium text-foreground underline decoration-primary underline-offset-4 hover:text-primary">
-        {name}&nbsp;↗
-      </Link>
-      {rest}
-    </>
-  );
-}
+import { days, roomOf, roomSlug } from "@/data/programme";
+import { Person } from "@/components/Person";
 
 export const Route = createFileRoute("/programme")({
   head: () => ({
@@ -60,7 +41,11 @@ function Programme() {
             <time className="font-display text-sm font-bold text-primary">{s.time}</time>
             <div>
               <h2 className={`font-bold ${s.kind === "break" ? "text-muted-foreground" : "text-lg"}`}>{s.title}</h2>
-              {s.room && <p className="text-xs uppercase tracking-wide text-muted-foreground">{s.room}</p>}
+              {s.room && (
+                <Link to="/salles" search={{ jour: active, salle: roomSlug(roomOf(s)!) }} className="block w-fit text-xs uppercase tracking-wide text-muted-foreground hover:text-primary">
+                  {s.room}
+                </Link>
+              )}
               {s.theme && <p className="mt-2 text-sm italic text-foreground/85">{s.theme}</p>}
               {s.people && (
                 <ul className="mt-3 space-y-1 text-sm text-muted-foreground">

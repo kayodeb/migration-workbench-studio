@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as IntervenantsRouteImport } from './routes/intervenants'
 import { Route as ProgrammeRouteImport } from './routes/programme'
+import { Route as SallesRouteImport } from './routes/salles'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +29,44 @@ const ProgrammeRoute = ProgrammeRouteImport.update({
   path: '/programme',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SallesRoute = SallesRouteImport.update({
+  id: '/salles',
+  path: '/salles',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/intervenants': typeof IntervenantsRoute
   '/programme': typeof ProgrammeRoute
+  '/salles': typeof SallesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/intervenants': typeof IntervenantsRoute
   '/programme': typeof ProgrammeRoute
+  '/salles': typeof SallesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/intervenants': typeof IntervenantsRoute
   '/programme': typeof ProgrammeRoute
+  '/salles': typeof SallesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/intervenants' | '/programme'
+  fullPaths: '/' | '/intervenants' | '/programme' | '/salles'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/intervenants' | '/programme'
-  id: '__root__' | '/' | '/intervenants' | '/programme'
+  to: '/' | '/intervenants' | '/programme' | '/salles'
+  id: '__root__' | '/' | '/intervenants' | '/programme' | '/salles'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   IntervenantsRoute: typeof IntervenantsRoute
   ProgrammeRoute: typeof ProgrammeRoute
+  SallesRoute: typeof SallesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +92,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgrammeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/salles': {
+      id: '/salles'
+      path: '/salles'
+      fullPath: '/salles'
+      preLoaderRoute: typeof SallesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   IntervenantsRoute: IntervenantsRoute,
   ProgrammeRoute: ProgrammeRoute,
+  SallesRoute: SallesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
