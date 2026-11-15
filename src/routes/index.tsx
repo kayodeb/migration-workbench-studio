@@ -35,7 +35,7 @@ function Index() {
           </div>
           <div className="mt-12 flex -space-x-3">
             {faces.map((s) => (
-              <img key={s.last} src={s.photo} alt={`${s.first} ${s.last}`} className="h-12 w-12 rounded-full border-2 border-background object-cover" />
+              <img key={s.last} src={s.photo} alt={`${s.first} ${s.last}`} onError={(e) => { e.currentTarget.style.display = "none"; }} className="h-12 w-12 rounded-full border-2 border-background object-cover" />
             ))}
           </div>
         </div>

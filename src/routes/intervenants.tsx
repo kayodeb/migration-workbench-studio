@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
-import { speakers, speakerId } from "@/data/speakers";
+import { speakers, speakerId, type Speaker } from "@/data/speakers";
 
 export const Route = createFileRoute("/intervenants")({
   validateSearch: (s: Record<string, unknown>) => ({ q: typeof s["q"] === "string" ? (s["q"] as string) : "" }),
@@ -18,7 +18,20 @@ export const Route = createFileRoute("/intervenants")({
   component: Intervenants,
 });
 
-const normQ = (t: string) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
+function SpeakerPhoto({ s }: { s: Speaker }) {
+  const [failed, setFailed] = useState(false);
+  if (s.photo && !failed) {
+    return <img src={s.photo} alt={`${s.first} ${s.last}`} loading="lazy" onError={() => setFailed(true)} className="aspect-[1.1] w-full object-cover object-top" />;
+  }
+  return (
+    <div className="flex aspect-[1.1] w-full flex-col items-center justify-center bg-secondary">
+      <span className="font-display text-5xl font-bold text-muted-foreground">{s.first[0]}{s.last[0]}</span>
+      <span className="mt-2 text-xs text-muted-foreground">Photo à venir</span>
+    </div>
+  );
+}
+
+const normQ =(t: string) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
 
 function Intervenants() {
   const { q } = Route.useSearch();
@@ -48,14 +61,7 @@ function Intervenants() {
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((s) => (
           <article key={s.first + s.last} id={speakerId(s)} className={`scroll-mt-24 overflow-hidden rounded-lg border bg-card transition-all ${selected === speakerId(s) ? "speaker-selected border-primary" : "border-border"}`}>
-            {s.photo ? (
-              <img src={s.photo} alt={`${s.first} ${s.last}`} loading="lazy" className="aspect-[1.1] w-full object-cover object-top" />
-            ) : (
-              <div className="flex aspect-[1.1] w-full flex-col items-center justify-center bg-secondary">
-                <span className="font-display text-5xl font-bold text-muted-foreground">{s.first[0]}{s.last[0]}</span>
-                <span className="mt-2 text-xs text-muted-foreground">Photo à venir</span>
-              </div>
-            )}
+            <SpeakerPhoto s={s} />
             <div className="h-1 bg-brand" />
             <div className="p-5">
               <p className="text-sm text-primary">{s.first}</p>
