@@ -1,10 +1,10 @@
 const photos = import.meta.glob("@/assets/speakers/*.asset.json", { eager: true, import: "default" }) as Record<string, { url: string }>;
 const photo = (n: number) => {
   const k = Object.keys(photos).find((p) => p.endsWith(`/s${String(n).padStart(2, "0")}.jpg.asset.json`));
-  return k ? photos[k].url : undefined;
+  return k ? photos[k]?.url : undefined;
 };
 
-export type Speaker = { first: string; last: string; role: string; org?: string; photo?: string };
+export type Speaker = { first: string; last: string; role: string; org?: string | undefined; photo?: string | undefined };
 
 const raw: [string, string, string, string?][] = [
   ["Franck", "KIÉ", "Commissaire Général du Cyber Africa Forum"],
