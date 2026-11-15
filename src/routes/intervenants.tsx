@@ -1,9 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
 import { speakers, speakerId } from "@/data/speakers";
 
 export const Route = createFileRoute("/intervenants")({
+  validateSearch: (s: Record<string, unknown>) => ({ q: typeof s["q"] === "string" ? (s["q"] as string) : "" }),
   head: () => ({
     meta: [
       { title: "Intervenants — Cyber Africa Forum 2026" },
@@ -20,7 +21,9 @@ export const Route = createFileRoute("/intervenants")({
 const normQ = (t: string) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
 
 function Intervenants() {
-  const [q, setQ] = useState("");
+  const { q } = Route.useSearch();
+  const navigate = useNavigate();
+  const setQ = (v: string) => navigate({ to: "/intervenants", search: { q: v }, replace: true });
   const [selected, setSelected] = useState<string | null>(null);
   useEffect(() => {
     const pick = () => {
@@ -39,7 +42,9 @@ function Intervenants() {
     <main className="mx-auto max-w-6xl px-5 py-14">
       <p className="text-sm uppercase tracking-widest text-primary">Personnalités</p>
       <h1 className="mt-2 text-4xl font-bold md:text-5xl">Intervenants du Forum</h1>
-      <div className="relative mt-8 max-w-md"><Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" /><input id="recherche" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Rechercher un nom, une organisation…" className="w-full rounded-md border border-input bg-card py-3 pl-10 pr-4 text-sm outline-none focus:ring-2 focus:ring-ring" /></div>
+      <div className="sticky top-16 z-20 -mx-5 mt-8 bg-background/95 px-5 py-3 backdrop-blur">
+        <div className="relative max-w-md"><Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" /><input id="recherche" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Rechercher un nom, une organisation…" className="w-full rounded-md border border-input bg-card py-3 pl-10 pr-4 text-sm outline-none focus:ring-2 focus:ring-ring" /></div>
+      </div>
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((s) => (
           <article key={s.first + s.last} id={speakerId(s)} className={`scroll-mt-24 overflow-hidden rounded-lg border bg-card transition-all ${selected === speakerId(s) ? "speaker-selected border-primary" : "border-border"}`}>
