@@ -20,7 +20,7 @@ const kindStyle = { plenary: "border-l-accent", side: "border-l-primary", break:
 
 function Programme() {
   const [active, setActive] = useState(days.length - 1);
-  const day = days[active];
+  const day = days[active]!;
   return (
     <main className="mx-auto max-w-5xl px-5 py-14">
       <p className="text-sm uppercase tracking-widest text-primary">Calendrier prévisionnel</p>
