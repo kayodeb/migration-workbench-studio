@@ -147,8 +147,8 @@ export const speakers: Speaker[] = [
   "photo": "https://web.cyberafricaforum.com/storage/uploads/speakers/thumbnails/1794703270.jpg"
  },
  {
-  "first": "Ghislain de",
-  "last": "SALINS",
+  "first": "Ghislain",
+  "last": "de SALINS",
   "role": "Global Lead Cybersecurite, Banque Mondiale",
   "photo": "https://web.cyberafricaforum.com/storage/uploads/speakers/thumbnails/1792664443.jpg"
  },
@@ -262,25 +262,25 @@ export const speakers: Speaker[] = [
  },
  {
   "first": "Benny",
-  "last": "Tomer",
+  "last": "TOMER",
   "role": "Vice-président des ventes et du développement commercial de DCG-Tech",
   "photo": "https://web.cyberafricaforum.com/storage/uploads/speakers/thumbnails/1793713025.jpg"
  },
  {
   "first": "Nir",
-  "last": "Kalron",
+  "last": "KALRON",
   "role": "Cofondateur et Président de 240 Analytics",
   "photo": "https://web.cyberafricaforum.com/storage/uploads/speakers/thumbnails/1793713070.jpg"
  },
  {
   "first": "Dr Eyal",
-  "last": "Pinko",
+  "last": "PINKO",
   "role": "CEO de SAIFORT",
   "photo": "https://web.cyberafricaforum.com/storage/uploads/speakers/thumbnails/1793712795.jpg"
  },
  {
   "first": "Romaric",
-  "last": "Doffou",
+  "last": "DOFFOU",
   "role": "Senior Manager – Cybersécurité offensive",
   "photo": "https://web.cyberafricaforum.com/storage/uploads/speakers/thumbnails/1794147948.png"
  }
