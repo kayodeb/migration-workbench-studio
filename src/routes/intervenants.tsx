@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 import { speakers, speakerId } from "@/data/speakers";
 
 export const Route = createFileRoute("/intervenants")({
-  validateSearch: (s: Record<string, unknown>) => ({ q: typeof s.q === "string" ? s.q : "" }),
+  validateSearch: (s: Record<string, unknown>) => ({ q: typeof s["q"] === "string" ? (s["q"] as string) : "" }),
   head: () => ({
     meta: [
       { title: "Intervenants — Cyber Africa Forum 2026" },
@@ -23,7 +23,7 @@ const normQ = (t: string) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").
 function Intervenants() {
   const { q } = Route.useSearch();
   const navigate = useNavigate();
-  const setQ = (v: string) => navigate({ to: "/intervenants", search: v ? { q: v } : {}, replace: true });
+  const setQ = (v: string) => navigate({ to: "/intervenants", search: { q: v }, replace: true });
   const [selected, setSelected] = useState<string | null>(null);
   useEffect(() => {
     const pick = () => {
