@@ -25,6 +25,7 @@ function Intervenants() {
   useEffect(() => {
     const pick = () => {
       const id = decodeURIComponent(window.location.hash.slice(1));
+      if (id === "recherche") document.getElementById("recherche")?.focus();
       if (!id || id === "recherche") return setSelected(null);
       setSelected(id);
       requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" }));
