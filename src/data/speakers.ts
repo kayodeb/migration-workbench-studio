@@ -462,20 +462,20 @@ const list: Speaker[] = [
  { "first": "Marlyse", "last": "KIKISSAGBE", "role": "bjWhiteHats" },
  { "first": "Henri", "last": "DA SYLVA", "role": "Club RSSI Bénin" },
  { "first": "Christelle", "last": "FAIHUN AGO", "role": "TG", "org": "APSI-BJ" },
- { "first": "Nick-Aurel", "last": "HOUESSOU", "role": "SG", "org": "APSI-BJ" },
- { "first": "Adeshina", "last": "YESSOUFOU", "role": "OG", "org": "APSI-BJ" },
- { "first": "Harold", "last": "ADJAHO", "role": "Coordinateur", "org": "Bénin DNS Forum" },
+ { "first": "Nick-Aurel", "last": "HOUESSOU", "role": "SG", "org": "APSI-BJ", "photo": "/speakers/nick-aurel-houessou.jpg" },
+ { "first": "Adeshina", "last": "YESSOUFOU", "role": "OG", "org": "APSI-BJ", "photo": "/speakers/adeshina-yessoufou.jpg" },
+ { "first": "Harold", "last": "ADJAHO", "role": "Coordinateur", "org": "Bénin DNS Forum", "photo": "/speakers/harold-adjaho.jpg" },
  { "first": "Hermine", "last": "GOUKODADJA", "role": "ISOC Bénin" },
  { "first": "Marius", "last": "GNANCADJA", "role": "CC", "org": "APSI-BJ" },
  { "first": "Gérard", "last": "ADETOLA", "role": "Club RSSI Bénin" },
- { "first": "Jean Claude", "last": "SIGUI", "role": "Président", "org": "Club des DSI Côte d'Ivoire" },
- { "first": "Bernadin", "last": "TONOUDJI", "role": "Manager du bjCSIRT", "org": "ASIN" },
- { "first": "Grégoire", "last": "GOUCLOUNON", "role": "RSSI" },
- { "first": "Kevin", "last": "DEGILA", "role": "Directeur de la Valorisation des Innovations, des Technologies et de l'Expérimentation", "org": "Ministère de la Transformation Digitale et de l'Innovation, Bénin" },
- { "first": "Serge-Éric", "last": "GNAMKEY", "role": "Country Manager, Côte d'Ivoire et Sénégal", "org": "Yango Food" },
- { "first": "Dr Moussa", "last": "TRAORÉ", "role": "Directeur Général, SaH Analytics France et Directeur Général Adjoint chargé de l'Innovation et de la Recherche & Développement", "org": "SaH Analytics International" },
- { "first": "Kévin", "last": "AGOLI-AGBO", "role": "Directeur des Opérations et de la Relation Client", "org": "Quality Corporate" },
- { "first": "Armandine", "last": "ANAGO", "role": "Cheffe du département Confiance Numérique et Développement", "org": "Quality Corporate" }
+ { "first": "Jean Claude", "last": "SIGUI", "role": "Président", "org": "Club des DSI Côte d'Ivoire", "photo": "/speakers/jean-claude-sigui.jpg" },
+ { "first": "Bernadin", "last": "TONOUDJI", "role": "Manager du bjCSIRT", "org": "ASIN", "photo": "/speakers/bernadin-tonoudji.png" },
+ { "first": "Grégoire", "last": "GOUCLOUNON", "role": "RSSI", "photo": "/speakers/gregoire-gouclounon.jpg" },
+ { "first": "Kevin", "last": "DEGILA", "role": "Directeur de la Valorisation des Innovations, des Technologies et de l'Expérimentation", "org": "Ministère de la Transformation Digitale et de l'Innovation, Bénin", "photo": "/speakers/kevin-degila.jpg" },
+ { "first": "Serge-Éric", "last": "GNAMKEY", "role": "Country Manager, Côte d'Ivoire et Sénégal", "org": "Yango Food", "photo": "/speakers/serge-eric-gnamkey.jpg" },
+ { "first": "Dr Moussa", "last": "TRAORÉ", "role": "Directeur Général, SaH Analytics France et Directeur Général Adjoint chargé de l'Innovation et de la Recherche & Développement", "org": "SaH Analytics International", "photo": "/speakers/moussa-traore.jpg" },
+ { "first": "Kévin", "last": "AGOLI-AGBO", "role": "Directeur des Opérations et de la Relation Client", "org": "Quality Corporate", "photo": "/speakers/kevin-agoli-agbo.jpg" },
+ { "first": "Armandine", "last": "ANAGO", "role": "Cheffe du département Confiance Numérique et Développement", "org": "Quality Corporate", "photo": "/speakers/armandine-anago.jpg" }
 ];
 
 export const norm = (t: string) =>
